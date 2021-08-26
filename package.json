@@ -1,5 +1,5 @@
 {
-  "name": "ttab-backend",
+  "name": "TTAB-backend",
   "version": "1.0.0",
   "description": "backend api server for time-tracking-app-banyan",
   "main": "index.js",
