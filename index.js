@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8080;
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("<h1>Hello TAB team, and universe!</h1>");
+  res.send({ message: 'if you\'re seeing this message the api server is running' });
 });
 
 app.get("/api", (req, res) => {
