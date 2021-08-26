@@ -1,19 +1,17 @@
 {
   "name": "TTAB-backend",
   "version": "1.0.0",
-  "description": "backend api server for time-tracking-app-banyan",
   "main": "index.js",
-  "author": "Banyan-Labs",
+  "repository": "https://github.com/Banyan-Labs/TTAB-backend.git",
+  "author": "Josh McLain <joshmclain45@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.12"
   }
 }
