@@ -4,13 +4,13 @@ const cors = require("cors");
 
 const PORT = process.env.PORT || 8080;
 
-app.use(cors());
+// app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send({ message: 'if you\'re seeing this message the api server is running' });
 });
 
-app.get("/api", (req, res) => {
+app.get("/api/test", (req, res) => {
   res.json({ message: "test success" });
 });
 
