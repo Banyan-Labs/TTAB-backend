@@ -95,7 +95,7 @@ This application does have continuos deployment from `main` branch on Heroku at 
 ## Product Owner
 
 ### Banyan Labs - [website](https://banyanlabs.io/)
-![Banyan Labs Logo](.\resources\Logo-ba022e637f1be3fe28d39b0560ae901b.png)
+![Banyan Labs Logo](Logo-ba022e637f1be3fe28d39b0560ae901b.png)
 ###### &copy; 2021
 ---
 
