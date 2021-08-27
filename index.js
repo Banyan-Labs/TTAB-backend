@@ -7,11 +7,11 @@ const PORT = process.env.PORT || 8080;
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send({ message: 'Hello universe! Welcome t-TAB team' });
+  res.sendFile(`${__dirname}/index.html`);
 });
 
 app.get("/api", (req, res) => {
-  res.send({ message: 'if you\'re seeing this message the api server is running' });
+  res.json({ message: 'if you\'re seeing this message the api server is running' });
 });
 
 app.get("/api/test", (req, res) => {
