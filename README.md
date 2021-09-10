@@ -1,4 +1,4 @@
-# Time Tracking App *-backend* `v1.0`
+# Time Tracking App *-backend* `v1.1`
 
 ## Table of Contents
 
@@ -119,11 +119,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Release Notes
 
-### Current Version `v1.0`
+### Current Version `v1.1`
 
 #### v1.0 August 26th, 2021
 
 Basic boiler plate setup to branch development from. Continuous deployment setup through [Heroku](https://tta-backend.herokuapp.com/)
+
+#### v1.1 September 10th, 2021
+
+Restructured end points and created `/api/test` routes
 
 ---
 
