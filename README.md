@@ -1,4 +1,4 @@
-# Case Study CMS *-backend* `v1.0`
+# Time Tracking App *-backend* `v1.1`
 
 ## Table of Contents
 
@@ -70,6 +70,16 @@ Server will default to port `8080` - to change port create `.env` file and assig
 
 portal access at url: [`localhost:8080`](http://127.0.0.1:8080/)
 
+### Deployed Development Access
+
+This application does have continuos deployment from `main` branch on Heroku
+
+url: [`https://tta-backend.herokuapp.com/`](https://tta-backend.herokuapp.com/)
+
+---
+
+> :sunglasses: **Keep Clam and `C0D3` on.** _Hack the Planet!_ :earth_americas:
+
 ---
 
 ## Technologies
@@ -77,10 +87,11 @@ portal access at url: [`localhost:8080`](http://127.0.0.1:8080/)
 - Node.js
 - Express.js
 - CORS
+- Heroku
 
 ## Contributors
 
-- [Jessica Dickerson (Scrum Master | Developer)]
+- [Josh McLain (Team Lead | DevOps | Developer)](https://jmclain-banyan.github.io/) :smile_cat: `v1` *-Author*
 
 ## Product Owner
 
@@ -108,9 +119,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Release Notes
 
-### Current Version `v1.0`
+### Current Version `v1.1`
 
 #### v1.0 August 26th, 2021
 
+Basic boiler plate setup to branch development from. Continuous deployment setup through [Heroku](https://tta-backend.herokuapp.com/)
+
+#### v1.1 September 10th, 2021
+
+Restructured end points and created `/api/test` routes
+
+---
 
 ## Changelog
