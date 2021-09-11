@@ -10,6 +10,11 @@ router.route('/test')
         message: 'test post response successful',
         body: req.body
     }))
+    router.route('/SignIn')
+    .get((req, res) => res.json({ message: 'test get response successful' }))
+    .post((req, res) => {
+        return res.json(`${req.body.emailAddress}`)
+    })
 
 
 module.exports = router;
