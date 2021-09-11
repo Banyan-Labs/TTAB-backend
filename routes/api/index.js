@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const Time = require('../../TimeData.json');
 
-console.log(Time, "looking at time")
-
 router.route('/')
     .get((req, res) => res.json({ message: 'server connection active' }))
 
