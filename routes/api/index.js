@@ -15,9 +15,5 @@ router.route('/test')
 
     router.route('/timeData')
     .get((req, res) => res.json({ message: Time }))
-    // .post((req, res) => res.json({
-    //     message: 'test post response successful',
-    //     body: req.body
-    // }))
 
 module.exports = router;
