@@ -15,14 +15,22 @@ router
   );
 
 router.route("/test/login").post((req, res) => {
-    const data = require("./mockData/mockData.json");
-    const parsedData = JSON.parse(data);
-    const user = parsedData.filter((user) => user.email === req.body.email && user.password === req.body.password);
-    return user[0] ? res.json({
-        message: "response successful",
-        body: req.body,
-      })
-    : "User doesn't exsist";
+  const data = require("./mockData/mockData.json");
+  const user = data.filter((user) => user.email === req.body.email)[0];
+
+  if (!user) {
+    return res.json({ error: true, message: "user does not exists" });
+  } else if (user.password != req.body.password) {
+    return res.json({ error: true, message: "password does not match" });
+  } else {
+    return res.json({
+      user: {
+        email: user.email,
+        firstName: user.firstName,
+        lastName: user.lastName,
+      },
+    });
+  }
 });
 
 module.exports = router;
