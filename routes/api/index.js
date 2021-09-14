@@ -14,6 +14,6 @@ router.route('/test')
 
 
     router.route('/timeData')
-    .get((req, res) => res.json({ message: Time }))
+    .get((req, res) => res.json({ userTimeEntry: Time }))
 
 module.exports = router;
