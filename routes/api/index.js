@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const Time = require('../../TimeData.json');
 
 router.route('/')
     .get((req, res) => res.json({ message: 'server connection active' }))
@@ -13,7 +12,14 @@ router.route('/test')
     }))
 
 
-    router.route('/timeData')
-    .get((req, res) => res.json({ userTimeEntry: Time }))
+    router.route('/test/timeData/:userId')
+    .get((req, res) => {
+        const Time = require('../../TimeData.json');
+        const { userId } = req.params;
+
+        const userTimeEntries = Time.filter((entry) => entry.userId == userId)
+
+        return res.json({ timeEntries: userTimeEntries.length })
+    })
 
 module.exports = router;
