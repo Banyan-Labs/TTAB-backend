@@ -33,4 +33,14 @@ router.route("/test/login").post((req, res) => {
   }
 });
 
+    router.route('/test/timeData/:userId')
+    .get((req, res) => {
+        const Time = require('../../TimeData.json');
+        const { userId } = req.params;
+
+        const userTimeEntries = Time.filter((entry) => entry.userId == userId)
+
+        return res.json({ timeEntries: userTimeEntries.length })
+    })
+
 module.exports = router;
