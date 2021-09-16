@@ -1,4 +1,5 @@
-const router = require('express').Router();
+const router = require("express").Router();
+const formatData = require("../../../utils/formatMockTimeEntries");
 
 router
   .route("/")
@@ -37,6 +38,15 @@ router.route("/timeData/:userId").get((req, res) => {
   const userTimeEntries = Time.filter((entry) => entry.userId == userId);
 
   return res.json({ timeEntries: userTimeEntries });
+});
+
+router.route("/time-entries/:userId").get((req, res) => {
+  const { userId } = req.params;
+  const MockCollection = require("../../../mockData.json").fakeTimeEntries;
+  const findAllBy = (userId) =>
+    MockCollection.filter((entry) => entry.userId === userId);
+  const userTimeEntries = findAllBy(userId);
+  return res.json({ timeEntries: formatData(userTimeEntries) });
 });
 
 module.exports = router;
