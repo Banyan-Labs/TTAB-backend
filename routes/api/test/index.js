@@ -21,6 +21,7 @@ router.route("/login").post((req, res) => {
   } else {
     return res.json({
       user: {
+        userId: user._id,
         email: user.email,
         firstName: user.firstName,
         lastName: user.lastName,
