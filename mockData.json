@@ -1,0 +1,237 @@
+{
+    "fakeUserProfiles": [
+        {
+            "_id": "1",
+            "firstName": "Arthur",
+            "lastName": "Dent",
+            "email": "test@test.com",
+            "password": "12345"
+        },
+        {
+            "_id": "2",
+            "firstName": "Ford",
+            "lastName": "Prefect",
+            "email": "test@test.com",
+            "password": "12345"
+        }
+    ],
+    "fakeTimeEntries": [
+        {
+          "userId": "1",
+          "date": "9/13/2020",
+          "project": "Information Systems Manager",
+          "timeIn": "11:39 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/13/2020",
+          "project": "Account Executive",
+          "timeIn": "9:56 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/14/2020",
+          "project": "Information Systems Manager",
+          "timeIn": "8:59 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/14/2020",
+          "project": "Analog Circuit Design manager",
+          "timeIn": "7:28 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/14/2020",
+          "project": "Budget/Accounting Analyst II",
+          "timeIn": "10:12 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/15/2020",
+          "project": "Mechanical Systems Engineer",
+          "timeIn": "10:25AMM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/15/2020",
+          "project": "Graphic Designer",
+          "timeIn": "12:30 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/16/2020",
+          "project": "Professor",
+          "timeIn": "10:35AMM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/16/2020",
+          "project": "Software Consultant",
+          "timeIn": "6:51 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/16/2020",
+          "project": "Payment Adjustment Coordinator",
+          "timeIn": "11:35AMM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/17/2020",
+          "project": "Sales Representative",
+          "timeIn": "7:34 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/17/2020",
+          "project": "Help Desk Technician",
+          "timeIn": "3:03 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/17/2020",
+          "project": "Account Executive",
+          "timeIn": "7:17 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/17/2020",
+          "project": "Account Executive",
+          "timeIn": "7:29 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "1",
+          "date": "9/17/2020",
+          "project": "Registered Nurse",
+          "timeIn": "9:28 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/13/2020",
+          "project": "Help Desk Technician",
+          "timeIn": "2:36 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/13/2020",
+          "project": "Account Representative IV",
+          "timeIn": "6:41 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/13/2020",
+          "project": "Human Resources Assistant I",
+          "timeIn": "9:28 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/13/2020",
+          "project": "Research Assistant I",
+          "timeIn": "10:51AMM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/13/2020",
+          "project": "Compensation Analyst",
+          "timeIn": "10:04AMM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/14/2020",
+          "project": "Legal Assistant",
+          "timeIn": "9:17 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/15/2020",
+          "project": "Human Resources Manager",
+          "timeIn": "12:34AMM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/15/2020",
+          "project": "Human Resources Manager",
+          "timeIn": "12:34AMM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/15/2020",
+          "project": "Help Desk Technician",
+          "timeIn": "2:34 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/15/2020",
+          "project": "Compensation Analyst",
+          "timeIn": "1:20 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/15/2020",
+          "project": "VP Quality Control",
+          "timeIn": "9:12 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/16/2020",
+          "project": "Sales Representative",
+          "timeIn": "7:47 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/16/2020",
+          "project": "Registered Nurse",
+          "timeIn": "2:14 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/16/2020",
+          "project": "Recruiter",
+          "timeIn": "9:18 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/16/2020",
+          "project": "Office Assistant I",
+          "timeIn": "2:06 AM",
+          "timeOut": "11:00 PM"
+        },
+        {
+          "userId": "2",
+          "date": "9/17/2020",
+          "project": "Software Test Engineer IV",
+          "timeIn": "4:52 AM",
+          "timeOut": "11:00 PM"
+        }
+      ]
+}
