@@ -6,6 +6,11 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
+
+const connectDB = require('./DB/Conncection');
+
+connectDB();
+
 const PORT = process.env.PORT || 8080;
 
 // middleware
