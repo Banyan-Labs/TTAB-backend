@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const formatData = require("../../../utils/formatMockTimeEntries");
+const User = require('../../../DB/User');
 
 router
   .route("/")
@@ -11,7 +12,24 @@ router
     })
   );
 
-  
+  router.route("/user").post((req, res) => {
+    const { name } = req.body;
+    if (!name) {
+      return res.json({ error: true, message: "name field can not be empty" });
+    } else {
+      const newUser = new User({ name });
+      newUser
+        .save()
+        .then((user) => res.json({ message: "new user saved", user }))
+        .catch((err) =>
+          res.json({
+            error: true,
+            message: "user name already taken",
+            log: err,
+          })
+        );
+    }
+  });
 
 router.route("/login").post((req, res) => {
   const data = require("../../../mockData.json").fakeUserProfiles;
