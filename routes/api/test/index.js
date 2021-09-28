@@ -17,30 +17,19 @@ router.route("/user").post(async (req, res) => {
   if (!name) {
     return res.json({ error: true, message: "name field can not be empty" });
   } else {
-    // const newUser = new UserModel({ name });
-    // newUser.save();
-    // console.log(newUser)
  const newUserTest = new UserModel({ name });
     try {
-     
       const newUser = await newUserTest.save();
       res.status(201).json(newUser);
     } catch (err) {
       res.status(400).json({ message: err.message });
     }
-
-    // .then((user) => res.json({ message: "new user saved", user }))
-    // .catch((err) =>
-
-    // console.log(err)
-    // res.json({
-    //   error: true,
-    //   message: "user name already taken",
-    //   log: err,
-
-    // })
-    // );
   }
+}).get( async (req,res) =>{
+  const allUsers = await UserModel.find()
+  return res.json({
+    users: allUsers
+  })
 });
 
 router.route("/login").post((req, res) => {
