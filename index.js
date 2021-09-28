@@ -5,11 +5,15 @@ if(process.env.NODE !== 'production') {
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const mongoose = require('mongoose');
 
 
-const connectDB = require('./DB/Conncection');
+const URI = "mongodb+srv://JoshuaBeets:Big_tom1@backendcluster0.herqe.mongodb.net/test";
 
-connectDB();
+mongoose.connect(URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const PORT = process.env.PORT || 8080;
 
