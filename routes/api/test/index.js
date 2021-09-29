@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const formatData = require("../../../utils/formatMockTimeEntries");
-const UserModel = require("../../../DB/User");
+const UserModel = require("../../../models/User");
 
 router
   .route("/")
@@ -13,11 +13,25 @@ router
   );
 
 router.route("/user").post(async (req, res) => {
-  const { name } = req.body;
+
+
+  const { 
+    name,
+    picture,
+    email,
+    auth0Id
+  } = req.body;
   if (!name) {
     return res.json({ error: true, message: "name field can not be empty" });
   } else {
- const newUserTest = new UserModel({ name });
+ const newUserTest = new UserModel({ 
+   name: name,
+   picture: picture,
+   email: email, 
+   auth0Id: auth0Id
+  });
+
+  console.log(newUserTest, "test")
     try {
       const newUser = await newUserTest.save();
       res.status(201).json(newUser);
