@@ -12,39 +12,35 @@ router
     })
   );
 
-router.route("/user").post(async (req, res) => {
+router
+  .route("/user")
+  .post(async (req, res) => {
+    const { name, avatar, email, auth0Id } = req.body;
+    if (!name) {
+      return res.json({ error: true, message: "name field can not be empty" });
+    } else {
+      const newUserTest = new UserModel({
+        name,
+        avatar,
+        email,
+        auth0Id,
+      });
 
-
-  const { 
-    name,
-   avatar,
-    email,
-    auth0Id
-  } = req.body;
-  if (!name) {
-    return res.json({ error: true, message: "name field can not be empty" });
-  } else {
- const newUserTest = new UserModel({ 
-   name: name,
-  avatar:avatar,
-   email: email, 
-   auth0Id: auth0Id
-  });
-
-  console.log(newUserTest, "test")
-    try {
-      const newUser = await newUserTest.save();
-      res.status(201).json(newUser);
-    } catch (err) {
-      res.status(400).json({ message: err.message });
+      console.log(newUserTest, "test");
+      try {
+        const newUser = await newUserTest.save();
+        res.status(201).json(newUser);
+      } catch (err) {
+        res.status(400).json({ message: err.message });
+      }
     }
-  }
-}).get( async (req,res) =>{
-  const allUsers = await UserModel.find()
-  return res.json({
-    users: allUsers
   })
-});
+  .get(async (req, res) => {
+    const allUsers = await UserModel.find();
+    return res.json({
+      users: allUsers,
+    });
+  });
 
 router.route("/login").post((req, res) => {
   const data = require("../../../mockData.json").fakeUserProfiles;
