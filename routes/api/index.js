@@ -6,4 +6,6 @@ router
 
 router.use('/test', require('./test'));
 
+router.use('/timeTracker', require('./timeTracker'));
+
 module.exports = router;
