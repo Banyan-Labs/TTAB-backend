@@ -17,7 +17,7 @@ router.route("/user").post(async (req, res) => {
 
   const { 
     name,
-    picture,
+   avatar,
     email,
     auth0Id
   } = req.body;
@@ -26,7 +26,7 @@ router.route("/user").post(async (req, res) => {
   } else {
  const newUserTest = new UserModel({ 
    name: name,
-   picture: picture,
+  avatar:avatar,
    email: email, 
    auth0Id: auth0Id
   });
