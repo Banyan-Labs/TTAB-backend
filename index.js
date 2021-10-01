@@ -8,10 +8,10 @@ const cors = require("cors");
 const mongoose = require('mongoose');
 
 
-const URI = "mongodb+srv://JoshuaBeets:Big_tom1@backendcluster0.herqe.mongodb.net/test";
+const URI = "mongodb+srv://JoshuaBeets:Big_tom1@backendcluster0.herqe.mongodb.net/test-dev";
 const localConnectionDB = "mongodb://localhost/tta-dev"
 
-mongoose.connect(localConnectionDB, {
+mongoose.connect(URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }, () => console.log('DB connected'));
