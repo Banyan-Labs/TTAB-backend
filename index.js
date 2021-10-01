@@ -9,11 +9,12 @@ const mongoose = require('mongoose');
 
 
 const URI = "mongodb+srv://JoshuaBeets:Big_tom1@backendcluster0.herqe.mongodb.net/test";
+const localConnectionDB = "mongodb://localhost/tta-dev"
 
-mongoose.connect(URI, {
+mongoose.connect(localConnectionDB, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
+}, () => console.log('DB connected'));
 
 const PORT = process.env.PORT || 8080;
 

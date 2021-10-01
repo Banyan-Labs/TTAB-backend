@@ -1,7 +1,8 @@
 const router = require("express").Router();
-const UserModel = require("../../../DB/User");
+const UserModel = require("../../../models/User");
+const userController = require('../../../controller/userController');
 
-router.route("/user").post(async (req, res) => {
+router.route("/").post(async (req, res) => {
   const { name, avatar, email, auth0Id } = req.body;
   if (!name) {
     return res.json({ error: true, message: "name field can not be empty" });
@@ -29,5 +30,7 @@ router.route("/all").get(async (req, res) => {
     users: allUsers,
   });
 });
+
+router.route('/test').post(userController.post)
 
 module.exports = router;
