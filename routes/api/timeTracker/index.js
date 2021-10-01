@@ -1,21 +1,24 @@
-router.route("/").post(async (req, res) => {
-    const { name } = req.body;
+const router = require("express").Router();
+// const UserModel = require("../../../DB/User");
 
-    console.log(name)
-    if (!name) {
-      return res.json({ error: true, message: "name field can not be empty" });
+
+router.route("/").post(async (req, res) => {
+    const { time, start, stop, userId } = req.body;
+
+    console.log(time, start, stop)
+    if (!time) {
+      return res.json({ error: true, message: "time field can not be empty" });
     } else {
-   const newUserTest = new UserModel({ name });
+
+        timeModel.findById()
+   const newTime = new TimeModel({ time });
       try {
-        const newUser = await newUserTest.save();
+        const newTimeEntry = await newUserTest.save();
         res.status(201).json(newUser);
       } catch (err) {
         res.status(400).json({ message: err.message });
       }
     }
-  }).get( async (req,res) =>{
-    const allUsers = await UserModel.find()
-    return res.json({
-      users: allUsers
-    })
   });
+
+  module.exports = router;
